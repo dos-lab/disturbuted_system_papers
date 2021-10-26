@@ -21,7 +21,7 @@ Yi J, Zhang C, Wang W, et al. Not All Explorations Are Equal: Harnessing Heterog
 ## Data sets & Experimental Design
 
 <!-- 撰写实验环境的设置，实验的对象，实验的比较方面，以及实验的结果（不要列举数据，要概括谈） -->
-测试平台：Amazon AWS 50个不同的云主机类型、100台云主机；测试应用：深度学习应用AlexNet, ResNet, Inception-v3, Char, BERT通过TensorFlow和MXNet实现；实验对象：Paleo@ICLR 2017和CherryPick@NSDI 2016；评价指标：使用推荐云配置进行深度学习应用训练的时间和成本。实验结果证明HeterBO相比于Paleo和CherryPick分别优化了3.1倍和2.34倍。
+测试平台：Amazon AWS 50个不同的云主机类型、100台云主机；测试应用：深度学习应用AlexNet, ResNet, Inception-v3, Char, BERT通过TensorFlow和MXNet实现；实验对象：Paleo@ICLR 2017和CherryPick@NSDI 2017；评价指标：使用推荐云配置进行深度学习应用训练的时间和成本。实验结果证明HeterBO相比于Paleo和CherryPick分别优化了3.1倍和2.34倍。
 
 
 ## Conclusion And Future Work
