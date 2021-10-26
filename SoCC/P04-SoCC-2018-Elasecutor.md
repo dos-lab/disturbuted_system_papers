@@ -1,34 +1,29 @@
 # Titile
 
-Continuum: A Platform for Cost-Aware, Low-Latency Continual Learning
+Elasecutor: Elastic Executor Scheduling in Data Analytics Systems
 
 ## Citing
 
-Tian H, Yu M, Wang W. Continuum: A Platform for Cost-Aware, Low-Latency Continual Learning[C]//Proceedings of the ACM Symposium on Cloud Computing. ACM, 2018: 26-40.
-
+Liu, Libin, and Hong Xu. "Elasecutor: Elastic Executor Scheduling in Data Analytics Systems." Proceedings of the ACM Symposium on Cloud Computing. ACM, 2018.
 ## Brief introduction
-这篇文章从TensorFlow、XGBoost等不同特征的ML框架出发，针对这些框架在线上学习（持续学习）场景下ML模型更新困难、资源开销大的问题，设置了统一的适配层Continuum，以及通过设置不同策略（成本感知、尽力交付和用户自定义）来控制模型更新的成本和效率，是首次提出集成ML框架的系统，能够达到降低数据协作延迟、低成本训练费用和提升模型质量的问题，同时具有一定的伸缩性和容错性
+Executor是spark、storm中的概念，其上可以运行多个task，executor可以看做是资源分配的基本单位（而不是task），当前executor的静态资源分配方式不能满足实际的需要，导致资源利用率比较低。需要能够动态调整executor的资源配额，提升资源的利用率。
 
 ## Key Methology
 
-比较训练模型的质量，数据延迟，训练成本，训练速度
-本论文的关键的贡献在于两种策略对成本和效率调度约束：
-先验条件：
-训练时间和训练数据集的数据量呈线性相关关系，公式3
-（1）训练效率优先（try to abort）：
-如果当前训练正在进行，然后新数据准备到来，此时有两种考虑：如果当前训练刚开始，且新数据比较大，将两次更新的数据合并效果更好，就中断当前训练；否则训练继续。公式六
-（2）成本优先（try to update earlier）：
-在任意时刻，需要决定是否执行模型更新，较少的模型更新和较短的训练时间可以控制成本，在数据完全可用前可以选择一个时机进行提前模型更新（如果提前更新比全量更新更快）；公式八
+（1）Benchmark：HiBench中较为经典的、具有一定代表性的spark作业，一个三个数据集，八类算法；
+（2）统计时间线上各个benchmark的资源变化情况，不平衡，使用率低是主要问题；
+（3）如何能使makespan的时间最少是核心优化问题，公式四；
+（4）使用改进的一维装箱算法，每次优先选择后续时间线中遗留资源最大的机器（Dominant Remain Resource，看做是DRF的变种），以DRR作为启发式规则，考虑时间序列的资源变化情况；
+（5）没有考虑异构资源、放置约束等情况
+（6）每个benchmark使用的executor数量等其他信息采用默认配置；
 
 ## Data sets
-均是开源数据集Twitter，Criteo，MovieLens 聚焦三类主要算法：LDA，PageRank等
+
 
 ## Experimental Design
 
 
 ## Conclusion And Future Work
 
-其核心是通过控制模型更新的时机来提升在线学习场景各类ML framework的准确度、成本和效率等方面，本质也是通过系统调度来控制，如果要改进，需要从几个方面入手：
-除了更新时机外，能不能控制更多的内容，数据量，框架选型、迁移、并行度等；
-能否有根据数据特征自主选择优化策略；
-能否和SLAQ这些内容（框架内优化）进行结合，形成体系。
+改进的一维装箱算法是核心贡献。论文中提出三处改进：支持放置约束；支持基于deadline的服务质量保障；支持与yarn等调度器的集成
+其使用场景具有明显的局限性，benchmark不能反映真实生产环境的需求，其固定的负载变化扩展性未必好，也不支持长任务；其是基于spark实现，只能限制在具有executor概念的框架，可扩展性不好，与其他framework、task（container）等类型的调度如何进行集成，如何分辨不同层次的干扰是核心问题。
