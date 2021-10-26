@@ -8,19 +8,75 @@
   - 01.编译优化
     - 云计算系统：
     - 深度学习系统：
+
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [Baechi@SoCC20](SoCC/P01-SoCC-2020-Baechi.md)    | 第一个将AI领域的算子放置工作在系统领域通过调度的思路进行发表|
+
+    - 服务器计算/函数系统：
+
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [Ray@OSDI18](OSDI/P01-OSDI-1028-ray.md)    | 第一个可以用于函数计算的系统ray|
+
   - 02.虚_拟_化
     - 深度学习系统：
   - 03.容量规划
-    - 大数据系统：[CherryPick@NSDI17](NSDI/P03-NSDI-2017-CherryPick.md)
-    - 深度学习系统：[HeterBO@IPDPS20](IPDPS/P03-IPDPS-2020-HeterBO.md)
-  - 04.调度优化
     - 大数据系统：
+  
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [CherryPick@NSDI17](NSDI/P03-NSDI-2017-CherryPick.md)    | 第一篇基于贝叶斯优化进行大数据作业的资源配置推荐|
+
+    - 深度学习系统：
+
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [HeterBO@IPDPS20](IPDPS/P03-IPDPS-2020-HeterBO.md)    | 第一篇基于贝叶斯优化进行深度学习作业的资源配置推荐|
+
+
+  - 04.调度优化
+    - 传统机器学习系统：
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [ModelGoverance@ATC18](ATC/P04-ATC-2018-MG.md)    | 定义机器学习资源使用时的主要过程|
+  
+    - 大数据系统：
+
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [BSBSched@HPDC19](HPDC/P04-HPDC-2019-BSBSched.md)    | 结合SSD和CPU使用情况优化调度 |
+|  [CR@HPDC19](HPDC/P04-HPDC-2019-CR.md)    | 基于容器资源的视图情况，调整容器内的作业使用情况 |
+|  [Elasecutor@SoCC18](SoCC/P04-SoCC-2018-Elasecutor.md)    | 在spark框架中，如何动态调整槽资源的使用|
+
     - 无服务器系统：
     - 深度学习系统：
+
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [Optimus@EuroSys18](EuroSys/P04-EuroSys-2018-Optimus.md)    | 基于二次函数的收敛速度调整机器学习训练的资源|
+|  [TicATac@MLSys18](MLSys/R01-MLSys-2018-TICTAC.md)    | 基于深度学习训练时不同算子的依赖关联性调整调度时机，避免等待|
+|  [Tiresias@NSDI19](NSDI/P04-NSDI-2019-Itresias.md)    | 相较于Optimus，使用新的优先级指标优化深度学习训练的资源使用|
+|  [BytePS@OSDI20](OSDI/P04-OSDI-2020-bytePS.md)    | 优化多卡深度学习训练时的参数同步，提升资源效率|
+|  [Gavel@OSDI20](OSDI/P04-OSDI-2020-gavel.md)    | 首次在顶会上提出深度学习训练作业需要使用异构资源，并满足多种不同的调度目标|
+|  [Gandiva@OSDI20](OSDI/P04-OSDI-2818-Gandiva.md)    | 首次在顶会上提出深度学习训练作业的资源波动使用特点|
+|  [Continuum@SoCC18](SoCC/P04-SoCC-2018-Continuum.md)    | 如何在在线场景下进行持续的深度学习训练作业|
+
+
     - 区块链系统：
     - 存储系统：
   - 05.性能预测
     - 深度学习系统：
+
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [clcokwork@OSDI20](OSDI/P05-OSDI-2020-Clockwork.md)    | 首次在顶会上提出深度学习运行时间如何准确评估的问题|
+
+    - 大数据系统：
+|  名称   |  概述   | 
+|  ----   |  ----  | 
+|  [PA@NSDI18](NSDI/P03-NSDI-2018-PA.md)    | 分析google数据集，主要关注对大数据作业的性能分析|
+
   - 06.基准测试
     - 云计算系统：
     - 区块链系统：
