@@ -11,7 +11,7 @@
   - 02.虚_拟_化
     - 深度学习系统：
   - 03.容量规划
-    - 大数据系统：
+    - 大数据系统：[CherryPick@NSDI17](NSDI/P03-NSDI-2017-CherryPick.md)
     - 深度学习系统：[HeterBO@IPDPS20](IPDPS/P03-IPDPS-2020-HeterBO.md)
   - 04.调度优化
     - 大数据系统：
