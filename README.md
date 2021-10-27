@@ -16,7 +16,7 @@ to do.
   - 02.虚_拟_化
     - 深度学习系统：
   - 03.容量规划
-    - 大数据系统：[CherryPick@NSDI17](NSDI/P03-NSDI-2017-CherryPick.md), [PARIS@SoCC17](SoCC/P03-SoCC-2017-PARIS.md), [Ernest@NSDI16](NSDI/P03-NSDI-2016-Ernest.md)
+    - 大数据系统：[CherryPick@NSDI17](NSDI/P03-NSDI-2017-CherryPick.md), [PARIS@SoCC17](SoCC/P03-SoCC-2017-PARIS.md)
     - 深度学习系统：[HeterBO@IPDPS20](IPDPS/P03-IPDPS-2020-HeterBO.md)
   - 04.调度优化  
     - 大数据系统： [BSBSched@HPDC19](HPDC/P04-HPDC-2019-BSBSched.md), [CR@HPDC19](HPDC/P04-HPDC-2019-CR.md), [Elasecutor@SoCC18](SoCC/P04-SoCC-2018-Elasecutor.md)
@@ -26,7 +26,7 @@ to do.
     - 存储系统：
   - 05.性能预测
     - 深度学习系统： [clcokwork@OSDI20](OSDI/P05-OSDI-2020-Clockwork.md)
-    - 大数据系统：[PA@NSDI18](NSDI/P05-NSDI-2018-PA.md) 
+    - 大数据系统：[PA@NSDI18](NSDI/P05-NSDI-2018-PA.md), [Ernest@NSDI16](NSDI/P05-NSDI-2016-Ernest.md)
   - 06.基准测试
     - 云计算系统：
     - 区块链系统：
