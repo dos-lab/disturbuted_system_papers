@@ -3,6 +3,10 @@
 <!-- 此部分是论文标题及其引用格式，建议使用latex格式 -->
 CherryPick: Adaptively Unearthing the Best Cloud Configurations for Big Data Analytics
 
+## Website
+
+https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/alipourfard
+
 ## Citing
 
 Alipourfard O, Liu H H, Chen J, et al. Cherrypick: Adaptively unearthing the best cloud configurations for big data analytics[C]//14th {USENIX} Symposium on Networked Systems Design and Implementation ({NSDI} 17). 2017: 469-482.
