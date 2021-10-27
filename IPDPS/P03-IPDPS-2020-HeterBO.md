@@ -5,7 +5,7 @@ Not All Explorations Are Equal: Harnessing Heterogeneous Profiling Cost for Effi
 
 ## Website
 
-https://10.1109/IPDPS47924.2020.00051
+https://doi.org/10.1109/IPDPS47924.2020.00051
 
 ## Citing
 
