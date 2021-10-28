@@ -16,7 +16,7 @@ to do.
   - [02.虚_拟_化](P02-虚_拟_化-泛读.md)
     - 深度学习系统：[KubeShare@HPDC20](HPDC/P02-HPDC-2020-kubeshare.md)
   - [03.容量规划](P03-容量规划-泛读.md)
-    - 大数据系统：[CherryPick@NSDI17](NSDI/P03-NSDI-2017-CherryPick.md), [PARIS@SoCC17](SoCC/P03-SoCC-2017-PARIS.md)
+    - 大数据系统：[CherryPick@NSDI17](NSDI/P03-NSDI-2017-CherryPick.md), [PARIS@SoCC17](SoCC/P03-SoCC-2017-PARIS.md), [Vesta@ICPP21](ICPP/P03-ICPP-2021-Vesta.md)
     - 深度学习系统：[HeterBO@IPDPS20](IPDPS/P03-IPDPS-2020-HeterBO.md)
   - [04.调度优化](P04-调度优化-泛读.md)  
     - 大数据系统： [BSBSched@HPDC19](HPDC/P04-HPDC-2019-BSBSched.md), [CR@HPDC19](HPDC/P04-HPDC-2019-CR.md), [Elasecutor@SoCC18](SoCC/P04-SoCC-2018-Elasecutor.md)
