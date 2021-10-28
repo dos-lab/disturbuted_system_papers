@@ -1,4 +1,4 @@
-# Titile
+# Title
 
 @article{gujarati2020serving,
   title={Serving DNNs like Clockwork: Performance Predictability from the Bottom Up},
@@ -11,15 +11,15 @@
 
 Gujarati, A., Karimi, R., Alzayat, S., Kaufmann, A., Vigfusson, Y., & Mace, J. (2020). Serving DNNs like Clockwork: Performance Predictability from the Bottom Up. arXiv preprint arXiv:2006.02464.
 
-## Brief introduction
+## Brief Introduction
 
 针对深度学习推理时服务质量难以有效保障的问题，提出了分层评估机器学习软件栈以提升服务质量预测准确度的的方法，通过对硬件资源、操作系统和深度学习进行综合评估，提升预测准确度。
 
-## Key Methology
+## Key Methodology
 
 主控制器+分散工作节点：克服内存缓存、硬件交互关系、外部影响三方面的问题。
 
-## Data sets
+## Data Sets
 
 DenseNet [36]
 DLA [75]
@@ -44,7 +44,7 @@ Winograd [45]
 4. clockwork能否应对真实负载；
 5. clockwork的伸缩性。
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 性能建模的深度（机器学习软硬件技术栈）和广度（异构资源情况下任务执行状态与资源使用状态）能否成为工作改造的瓶颈。
 

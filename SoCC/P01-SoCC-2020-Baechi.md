@@ -1,4 +1,4 @@
-# Titile
+# Title
 
 @inproceedings{jeon2020baechi,
   title={Baechi: fast device placement of machine learning graphs},
@@ -12,15 +12,15 @@
 
 Jeon, Beomyeol, et al. "Baechi: fast device placement of machine learning graphs." Proceedings of the 11th ACM Symposium on Cloud Computing. 2020.
 
-## Brief introduction
+## Brief Introduction
 
 针对深度学习模型且分时的模型并行问题进行改造优化，重点克服强化学习方法训练时间长的问题。
 
-## Key Methology
+## Key Methodology
 
 采用两种典型策略：内存约束的低通讯切分；内存约束的早任务切分。比较直观的方法
 
-## Data sets
+## Data Sets
 
 Inception-V3 and Google
 Neural Machine Translation System (GNMT).
@@ -33,7 +33,7 @@ Neural Machine Translation System (GNMT).
 4. 与单个GPU和专家放置结果的对比；
 5. bachi自己优化策略产生的影响。
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 需要考虑如何尽快复现本文的工作，控制算子放置和模型并行。
 

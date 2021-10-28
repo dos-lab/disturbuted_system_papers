@@ -1,4 +1,4 @@
-# Titile
+# Title
 
 TICTAC: ACCELERATING DISTRIBUTED DEEP LEARNING WITH COMMUNICATION SCHEDULING
 
@@ -6,7 +6,7 @@ TICTAC: ACCELERATING DISTRIBUTED DEEP LEARNING WITH COMMUNICATION SCHEDULING
 
 Hashemi S H, Jyothi S A, Campbell R H. TicTac: Accelerating Distributed Deep Learning with Communication Scheduling[J]. arXiv preprint arXiv:1803.03288, 2018.
 
-## Brief introduction
+## Brief Introduction
 
 本文主要思路如下：
 1. 针对分布式深度学习计算过程中的一次迭代过程中通信和计算两种基本情况出发，针对参数服务器环境，分析其中存在的相互干扰（overlap）导致的吞吐量下降，训练效率低等问题；
@@ -20,7 +20,7 @@ Hashemi S H, Jyothi S A, Campbell R H. TicTac: Accelerating Distributed Deep Lea
 2. 重叠系数
 
 
-## Key Methology
+## Key Methodology
 
 关注的启发式因素：
 1. dep，通信依赖：op能够运行时的recv依赖关系，可以通过深度优先遍历；
@@ -38,7 +38,7 @@ TAC：
 1. 根据依赖关系和运行时间统筹考虑优先级；
 2. M，P，M^+都考虑。
 
-## Data sets
+## Data Sets
 
 Inception v1，VGG-19等开源图片benchmark
 
@@ -51,10 +51,10 @@ Inception v1，VGG-19等开源图片benchmark
 5. 计算与通信重叠情况：重叠系数与美的迭代执行事件的分布关系，系统数越大，执行时间越短；
 6. 随着Ops数量的增长，stragger任务出现的数量呈下降趋势
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 本质是通过TIC和TAC两个核心策略动态调整优先级，需要事先知道OPS和recv执行的开销与耗时，本质上是队列的重排序策略，这些工作存在很多不足：
 
 1. 除PS结构外，能否在其他架构中中发现此种问题；
-2. 未看到clusterefficiency和data locality的情况；
+2. 未看到cluster efficiency和data locality的情况；
 3. 多维资源约束的情况。

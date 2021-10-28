@@ -22,13 +22,13 @@ Yuewen Wu, Heng Wu, Yuanjia Xu, Yi Hu, Wenbo Zhang, Hua Zhong, and Tao Huang. 20
 该论文的核心贡献在于发现、表示、复用跨框架大数据应用的云配置择优知识，解决了已有工作难以兼顾模型预测准确性和模型构建开销的问题。
 
 
-## Data sets & Experimental Design
+## Data Sets & Experimental Design
 
 <!-- 撰写实验环境的设置，实验的对象，实验的比较方面，以及实验的结果（不要列举数据，要概括谈） -->
 测试平台：Amazon AWS 120个不同的云主机类型；测试应用：三个大数据框架（Spark、Hadoop、Hive）的30个应用；实验对象：PARIS@SoCC 2017、Ernest@NSDI 2016；评价指标：大数据应用在推荐云配置运行时的性能提升，以及获取推荐云配置产生的训练开销。实验结果表明Vesta相比于实验对象，Vesta能够提升51%的应用性能，并且减少85%的训练开销。
 
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 <!-- 作者或者阅读者对本文工作的总结，以及未来可能的改进方向 -->
 该论文基于迁移学习解决跨框架大数据应用的云配置择优问题，其大规模离线测试的方法值得借鉴，可用于分析其他主流应用的资源使用特征，例如PyTorch、TensorFlow等深度学习应用。

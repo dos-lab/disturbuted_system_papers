@@ -17,18 +17,18 @@ Ting-An Yeh, Hung-Hsin Chen, Jerry Chou: KubeShare: A Framework to Manage GPUs a
 该论文主要面向机器学习的GPU分时复用场景，针对已有Round-robin方法容易导致资源碎片的问题。提出了支持Locality的GPU虚拟化和分配方法。Locality包括亲和性和非亲和性，将亲和性是将两个容器必须放在一个GPU上，反之为非亲和性。
 尽量将两两GPU总资源需求为100%的容器标记为亲和性，从而达到提高GPU资源利用率的目标。
 
-## Key Methology
+## Key Methodology
 
 <!-- 分点写，论述论文中主要技术手段的实施过程 -->
 论文的核心是如何实现GPU虚拟化，其核心思想是在Nvidia驱动后端与容器前端进行插桩，提供基于Token的GPU时间分配算法。
 
-## Data sets & Experimental Design
+## Data Sets & Experimental Design
 
 <!-- 撰写实验环境的设置，实验的对象，实验的比较方面，以及实验的结果（不要列举数据，要概括谈） -->
 测试平台：4 Nvidia Tesla V100 GPU（16GB显存）；测试应用：ResNet-50，DeepLab v3应用；评价指标：GPU虚拟化隔离效果和Locality敏感的GPU分配算法的收益。实验结果显示，测试应用完成时间（性能）可以缩短1倍。
 
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 <!-- 作者或者阅读者对本文工作的总结，以及未来可能的改进方向 -->
 该论文面向机器学习的GPU分时复用场景，工作仍比较初级，有很大的改进的空间。

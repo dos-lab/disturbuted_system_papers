@@ -1,4 +1,4 @@
-# Titile
+# Title
 
 Optimus: An Efficient Dynamic Resource Scheduler for Deep
 Learning Clusters
@@ -7,13 +7,13 @@ Learning Clusters
 
 Peng, Y , et al. "Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters." (2018).
 
-## Brief introduction
+## Brief Introduction
 
 本篇是论文作为继SLAQ之后的ML动态资源调整优化，针对深度学习在参数服务器架构下的调度优化。
 针对当前Borg等调度器的静态资源分配和当前调度器不支持Depp Learning负载的问题，通过对DL算法
 进行粗粒度建模，来实现资源的动态调整，同时限制资源迁移开销，并提供一定的检查点功能来保障可用性
 
-## Key Methology
+## Key Methodology
 
 1. 将深度学习的模型训练过程的粒度定义为迭代、收敛和和参数服务器三种基础元素；
 2. 学习DL的收敛曲线，进行归一化处理，构建多项式反应不同DL应用的变化曲线，用于预测下一阶段的训练质量；
@@ -26,7 +26,7 @@ Peng, Y , et al. "Optimus: An Efficient Dynamic Resource Scheduler for Deep Lear
 8. 参数服务器的负载均衡：最小化任意两个参数服务器之间的方差；最小化参数服务器之间的更新开销；
 
 
-## Data sets
+## Data Sets
 
 均是开源数据集：ResNext-110，ResNet-50，Inception-BN，KAGGLE等；
 
@@ -39,7 +39,7 @@ Peng, Y , et al. "Optimus: An Efficient Dynamic Resource Scheduler for Deep Lear
 4. 集群整体角度：JCT和MakeSpan；以及他们预测失败的情况（收敛值和训练速度）；
 5. 对比不同工作负载(任务到来时间：泊松分布，google数据集及随机到达)和训练模型下的敏感度（鲁棒性）；
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 当前较为明显的问题：
 1. 约束表达和单维资源约束的问题：没有考虑影响较大的GPU调度和内存管理的问题，这对DL影响很大；其他静态调度器的放置约束也未考虑；

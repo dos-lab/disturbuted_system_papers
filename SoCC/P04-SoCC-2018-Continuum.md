@@ -1,4 +1,4 @@
-# Titile
+# Title
 
 Continuum: A Platform for Cost-Aware, Low-Latency Continual Learning
 
@@ -6,10 +6,10 @@ Continuum: A Platform for Cost-Aware, Low-Latency Continual Learning
 
 Tian H, Yu M, Wang W. Continuum: A Platform for Cost-Aware, Low-Latency Continual Learning[C]//Proceedings of the ACM Symposium on Cloud Computing. ACM, 2018: 26-40.
 
-## Brief introduction
+## Brief Introduction
 这篇文章从TensorFlow、XGBoost等不同特征的ML框架出发，针对这些框架在线上学习（持续学习）场景下ML模型更新困难、资源开销大的问题，设置了统一的适配层Continuum，以及通过设置不同策略（成本感知、尽力交付和用户自定义）来控制模型更新的成本和效率，是首次提出集成ML框架的系统，能够达到降低数据协作延迟、低成本训练费用和提升模型质量的问题，同时具有一定的伸缩性和容错性
 
-## Key Methology
+## Key Methodology
 
 比较训练模型的质量，数据延迟，训练成本，训练速度
 本论文的关键的贡献在于两种策略对成本和效率调度约束：
@@ -20,13 +20,13 @@ Tian H, Yu M, Wang W. Continuum: A Platform for Cost-Aware, Low-Latency Continua
 （2）成本优先（try to update earlier）：
 在任意时刻，需要决定是否执行模型更新，较少的模型更新和较短的训练时间可以控制成本，在数据完全可用前可以选择一个时机进行提前模型更新（如果提前更新比全量更新更快）；公式八
 
-## Data sets
+## Data Sets
 均是开源数据集Twitter，Criteo，MovieLens 聚焦三类主要算法：LDA，PageRank等
 
 ## Experimental Design
 
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 其核心是通过控制模型更新的时机来提升在线学习场景各类ML framework的准确度、成本和效率等方面，本质也是通过系统调度来控制，如果要改进，需要从几个方面入手：
 除了更新时机外，能不能控制更多的内容，数据量，框架选型、迁移、并行度等；

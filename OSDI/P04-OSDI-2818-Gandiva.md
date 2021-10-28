@@ -1,4 +1,4 @@
-# Titile
+# Title
 
 Gandiva: Introspective Cluster Scheduling for Deep Learning
 
@@ -6,11 +6,11 @@ Gandiva: Introspective Cluster Scheduling for Deep Learning
 
 Xiao W, Bhardwaj R, Ramjee R, et al. Gandiva: Introspective cluster scheduling for deep learning[C]//13th {USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 18). 2018: 595-610.
 
-## Brief introduction
+## Brief Introduction
 
 当前深度学习的调度存在若干问题，由于深度学习作业的执行过程是一种基于反馈式驱动的探索，job开始时以多种配置执行，通过超参数搜索决定作业后续的运行情况，传统静态调度方法依次调度不同的job，并不支持多作业的情况，恰当配置难以被发现，阻塞问题频出，限制资源使用效率的提升；此外DL作业本身也存在工作负载异构性的问题，其敏感资源特征也不一致。为了解决DL调度的高延迟和低效率的问题，提出Gandiva框架，实现任务类型细粒度感知、多种优化手段综合使用的方式来提升DL执行效率。
 
-## Key Methology
+## Key Methodology
 
 1. 基于数据分析的DL作业执行的可预测性,对深度学习的特征（CPU、GPU工作状态）进行建模学习：
 （1）单一作业：服务器内部对作业的具有一定的敏感性，不同CPU核之间、相同CPU核不同GPU之间、同样GPU分布在不同的机器之间，相同成本下其数据本地性和处理速度的差异很大；
@@ -31,7 +31,7 @@ Xiao W, Bhardwaj R, Ramjee R, et al. Gandiva: Introspective cluster scheduling f
 （1）pytorch：提供时间片切分功能；
 （2）TensorFlow：提供迁移功能。
 
-## Data sets
+## Data Sets
 
 全部基于已有开源数据集和流行算法，表1和表2.
 
@@ -42,7 +42,7 @@ Xiao W, Bhardwaj R, Ramjee R, et al. Gandiva: Introspective cluster scheduling f
 3. 集群环境下测试：时间分片和装箱的效果；
 4. 基于真实轨迹进行的模拟测试：轨迹到来模拟；作业完成时间对比。
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 粗略的想法：
 1. DL的特征建模粒度仍然较粗，从数据集、到周期性能不能有更细粒度的刻画方式，周期性是否有更为明晰的表达；

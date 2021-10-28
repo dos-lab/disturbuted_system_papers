@@ -1,4 +1,4 @@
-# Titile
+# Title
 
 Performance analysis of cloud applications
 
@@ -6,7 +6,7 @@ Performance analysis of cloud applications
 
 Ardelean, Dan, Amer Diwan, and Chandra Erdman. "Performance analysis of cloud applications." 15th {USENIX} Symposium on Networked Systems Design and Implementation ({NSDI} 18). 2018.
 
-## Brief introduction
+## Brief Introduction
 
 本文通过对Google内部集群上Gmail的应用情况分析（一周数据），从以下几个关键指标上来度量云环境下大型分布式系统的性能：
 1. QPS：每秒交易数量；
@@ -14,7 +14,7 @@ Ardelean, Dan, Amer Diwan, and Chandra Erdman. "Performance analysis of cloud ap
 3. UVR 用户可见请求量；
 
 
-## Key Methology
+## Key Methodology
 
 构造相关图形，进行具体分析，得出用户请求持续变化的结论，得出以下关键结论：
 1. 用户请求不是造成负载波动的唯一原因，有很多开销是后台自行运行的（突发事件，定期运维任务等）；
@@ -29,7 +29,7 @@ Ardelean, Dan, Amer Diwan, and Chandra Erdman. "Performance analysis of cloud ap
 1. OPS并不完全和相应延迟正相关；
 2. 通过trace跟踪的方式进行水平（bursty tracing）和垂直注入（系统事件与应用事件）
 
-## Data sets
+## Data Sets
 
 没有使用开源数据集，主要聚焦于Gmail的运行时情况
 
@@ -40,7 +40,7 @@ Ardelean, Dan, Amer Diwan, and Chandra Erdman. "Performance analysis of cloud ap
 
 
 
-## Conclusion And Future Work
+## Conclusion and Future Work
 
 1. 任务请求资源分布、容器使用资源分布；
 2. 从若干维度分析开源数据集，得到机器、任务、实例、和容器相互之间的关系；
