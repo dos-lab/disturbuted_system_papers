@@ -38,7 +38,7 @@ https://www.usenix.org/conference/osdi20/presentation/ma
 
    Rammer将rTask-aware的DFG经过编译后，组织成在vDevice上执行的多段rProgram，rProgram由二维数组组织，第一维为vEU的id，第二维为在这个计算单元上进行的rTask id。将DFG编译成多段而不是一段rProgram是因为，rProgram是对底层设备的一次调用，而如果把全部计算放在一次调用里效率较差，或者不可能做到。
    
-   为保证rTask之间执行顺序，提供了像是内存屏障一样的barrier-rTask，用于等待某些rTask执行结束。
+   为保证rTask之间执行顺序，提供了像是内存屏障一样的barrier-rTask，用于等待某些rTask执行结束，属于细粒度的同步机制。
 
    最终，这些rProgram作为到底层硬件之间的IR，被转化成具体的硬件代码。
 
@@ -58,7 +58,7 @@ https://www.usenix.org/conference/osdi20/presentation/ma
 
         首先对这批rOperator，要选择它们的rKernel实现。如何选择？这里采取了启发式方法：对于每个rOperator的不同rKernel实现，有最“快速”和“效率”的两个版本。“快速”是指执行时间最短，“效率”是指rTask的数量乘以执行时间的积最小。那么如果在这个wave中的所有rOperator都使用最快的实现，并且将这些实现中的全部rTask都不能完全占用满全部的并行计算单元，就选择它们。否则，将会找到最高效的rKernels，并执行一次profiling，如果这些rKernel的执行时间更短，就选择它们，否则还是选择最快的rKernel。
 
-        随后将对所有rKernel中的所有rTask分配它的vEU。由于在选择rKernel时，做了profiling，知道每个rTask的执行时间，并且已知当前已经生成的部分rProgram，所以能够知道在当前的rProgram的执行下，哪个vEU能够最早的空闲下来。选择能够最早执行这个rTask的vEU即可。在这一步中，编译器能够将不同算子间的rTask共同考虑。
+        随后将对所有rKernel中的所有rTask分配它的vEU。由于在选择rKernel时，做了profiling，知道每个rTask的执行时间，并且已知当前已经生成的部分rProgram，所以能够知道在当前的rProgram的执行情况下，哪个vEU能够最早的空闲下来。选择能够最早执行这个rTask的vEU即可。在这一步中，编译器能够将不同算子间的rTask共同考虑。
 
 4. 目标设备代码生成
    
@@ -93,7 +93,7 @@ https://www.usenix.org/conference/osdi20/presentation/ma
       - 不同batch size
       - 不同input size
     - GPU利用率
-    - 调度overhead
+    - 调度overhead（在推理过程中，不在进行硬件计算的时间）
     - 算子间与算子内调度的相互作用测算（与RammerBase共同比较）
 
         分别对比：总是选择最快的rKernel，以及使用Rammer的调度策略选择的rKernel。
