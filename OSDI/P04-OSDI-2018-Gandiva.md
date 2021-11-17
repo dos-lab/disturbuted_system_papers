@@ -50,3 +50,4 @@ Xiao W, Bhardwaj R, Ramjee R, et al. Gandiva: Introspective cluster scheduling f
 3. 现在仍然是基于GPU整数核、较长的时间分片提升GPU效率，能否有类似于CPU的调度方式和低成本的中断挂起成本；
 4. 是否存在各类资源协同调度的问题，提出新的编程API，从而不需要较为困难的DL建模。 
 5. 文中提到在显存利用最少的时刻进行suspend并切换，从而减少GPU到CPU拷贝数据大小。但是当时间片结束时，可能需要等待每个任务的mini-batch结束，文中认为这个overhead是可以接受的，相比于要拷贝GPU的大量数据，但是否可以动态控制时间片的长度使得大多数任务能够在相近时刻执行完最近的mini-batch，从而减少overhead？
+6. 文中的suspend-resume是固定在1分钟左右。是否可以进行更细粒度的切换？类似于协程的切换模式，当模型需要使用网络传递梯度时，才进行切换，以换取更高的资源利用率？（切换的成本要小于网络传输成本）
